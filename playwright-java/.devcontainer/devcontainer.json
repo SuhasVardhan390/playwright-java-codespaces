@@ -1,5 +1,5 @@
 {
     "name": "Playwright Java Codespace",
     "image": "mcr.microsoft.com/devcontainers/java:17",
-    "postCreateCommand": "mvn exec:java -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args=\"install-deps && install\""
+    "postCreateCommand": "mvn exec:java -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args=install-deps && mvn exec:java -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args=install"
 }
