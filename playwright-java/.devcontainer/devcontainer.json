@@ -1,5 +1,8 @@
 {
-    "name": "Playwright Java Codespace",
-    "image": "mcr.microsoft.com/devcontainers/java:17",
-    "postCreateCommand": "mvn exec:java -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args=install-deps && mvn exec:java -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args=install"
+  "name": "Playwright Java Codespace",
+  "image": "mcr.microsoft.com/devcontainers/java:17",
+  "remoteEnv": {
+    "JAVA_HOME": "/usr/local/openjdk-17"
+  },
+  "postCreateCommand": "java -version && mvn exec:java -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args=install-deps && mvn exec:java -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args=install"
 }
